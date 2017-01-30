@@ -1,2 +1,2 @@
 # XMenuTestJASidePanels
-Project created to reproduce the JASide Panel on iPhone devices.
+Project created to reproduce the JASide Panel bug on iPhone devices.
