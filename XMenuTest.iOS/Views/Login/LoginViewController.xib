@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
+            <connections>
+                <outlet property="LoginButton" destination="Nat-Wv-KFI" id="2fz-ad-Hye"/>
+                <outlet property="LoginField" destination="831-i0-gfs" id="Gev-JG-ezZ"/>
+                <outlet property="PasswordField" destination="5Fx-0g-yZD" id="1hZ-kc-lTY"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="831-i0-gfs">
+                    <rect key="frame" x="16" y="275" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Fx-0g-yZD">
+                    <rect key="frame" x="16" y="323" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nat-Wv-KFI">
+                    <rect key="frame" x="139" y="361" width="97" height="30"/>
+                    <state key="normal" title="Login"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Nat-Wv-KFI" firstAttribute="top" secondItem="2" secondAttribute="top" constant="361" id="1xC-QX-veR"/>
+                <constraint firstItem="5Fx-0g-yZD" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="16" id="FYc-rY-FDz"/>
+                <constraint firstItem="Nat-Wv-KFI" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="139" id="KFW-kd-fbo"/>
+                <constraint firstAttribute="trailing" secondItem="831-i0-gfs" secondAttribute="trailing" constant="16" id="RXk-Hi-Bsj"/>
+                <constraint firstAttribute="trailing" secondItem="5Fx-0g-yZD" secondAttribute="trailing" constant="16" id="cKV-Ln-fdz"/>
+                <constraint firstItem="5Fx-0g-yZD" firstAttribute="top" secondItem="2" secondAttribute="top" constant="323" id="cTa-01-Uha"/>
+                <constraint firstItem="831-i0-gfs" firstAttribute="top" secondItem="2" secondAttribute="top" constant="275" id="rJo-Jq-j8M"/>
+                <constraint firstAttribute="trailing" secondItem="Nat-Wv-KFI" secondAttribute="trailing" constant="139" id="x9i-hL-2Nq"/>
+                <constraint firstItem="831-i0-gfs" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="16" id="yYt-xv-Wbg"/>
+            </constraints>
+            <point key="canvasLocation" x="63.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{33F194CD-483B-4C0B-BFE9-2B08A3C95234}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>XMenuTest.iOS</RootNamespace>
+    <AssemblyName>XMenuTest.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <IOSDebuggerPort>37846</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform.iOS">
+      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.iOS">
+      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.iOS">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.iOS.Support">
+      <HintPath>..\packages\MvvmCross.iOS.Support.4.4.0\lib\Xamarin.iOS10\MvvmCross.iOS.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="JASidePanels">
+      <HintPath>..\packages\MvvmCross.iOS.Support.JASidePanels.4.4.0\lib\Xamarin.iOS10\JASidePanels.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.iOS.Support.JASidePanels">
+      <HintPath>..\packages\MvvmCross.iOS.Support.JASidePanels.4.4.0\lib\Xamarin.iOS10\MvvmCross.iOS.Support.JASidePanels.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Views\Login\" />
+    <Folder Include="Views\Base\" />
+    <Folder Include="Views\HelpAndFeedback\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Settings\" />
+    <Folder Include="Views\Menu\" />
+    <Folder Include="Extentions\" />
+    <Folder Include="TableSources\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Cells\" />
+    <Folder Include="Fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Views\HelpAndFeedback\HelpAndFeedbackViewController.xib" />
+    <InterfaceDefinition Include="Views\Home\HomeViewController.xib" />
+    <InterfaceDefinition Include="Views\Login\LoginViewController.xib" />
+    <InterfaceDefinition Include="Views\Settings\SettingsViewController.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+    <None Include="Fonts\OpenSans-Light.ttf" />
+    <None Include="Fonts\OpenSans-Regular.ttf" />
+    <None Include="Fonts\OpenSans-Semibold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="LinkerPleaseInclude.cs" />
+    <Compile Include="DebugTrace.cs" />
+    <Compile Include="Views\Base\BaseViewController.cs" />
+    <Compile Include="Views\Base\MainView.cs" />
+    <Compile Include="Views\HelpAndFeedback\HelpAndFeedbackViewController.cs" />
+    <Compile Include="Views\HelpAndFeedback\HelpAndFeedbackViewController.designer.cs">
+      <DependentUpon>HelpAndFeedbackViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\HomeViewController.cs" />
+    <Compile Include="Views\Home\HomeViewController.designer.cs">
+      <DependentUpon>HomeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login\LoginViewController.cs" />
+    <Compile Include="Views\Login\LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsViewController.cs" />
+    <Compile Include="Views\Settings\SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Menu\MenuViewController.cs" />
+    <Compile Include="Extentions\AppStyles.cs" />
+    <Compile Include="TableSources\ManuTableSource.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Cells\MenuButtonCell.cs" />
+    <Compile Include="Cells\MenuHeaderCell.cs" />
+    <Compile Include="Cells\MenuSocialCell.cs" />
+    <Compile Include="Cells\OnlySingleLineTextCell.cs" />
+    <Compile Include="Cells\StandardImageCell.cs" />
+    <Compile Include="Extentions\Font.cs" />
+    <Compile Include="Helpers\Colors2.cs" />
+    <Compile Include="Helpers\Sizes2.cs" />
+    <Compile Include="Helpers\StringsResources2.cs" />
+    <Compile Include="Helpers\FieldControlModel2.cs" />
+    <Compile Include="Views\Base\BaseViewControllerWithoutNib.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Helpers\FieldControlsModel.cs" />
+    <BundleResource Include="Helpers\Sizes.cs" />
+    <BundleResource Include="Helpers\StringsResources.cs" />
+    <BundleResource Include="Resources\.DS_Store" />
+    <BundleResource Include="Resources\header_logo.png" />
+    <BundleResource Include="Resources\ic_help_white_2x.png" />
+    <BundleResource Include="Resources\ic_help_white_3x.png" />
+    <BundleResource Include="Resources\ic_help_white.png" />
+    <BundleResource Include="Resources\ic_home_white_2x.png" />
+    <BundleResource Include="Resources\ic_home_white_3x.png" />
+    <BundleResource Include="Resources\ic_home_white.png" />
+    <BundleResource Include="Resources\ic_settings_white_2x.png" />
+    <BundleResource Include="Resources\ic_settings_white_3x.png" />
+    <BundleResource Include="Resources\ic_settings_white.png" />
+    <BundleResource Include="Resources\ic_bug_report_white_2x.png" />
+    <BundleResource Include="Resources\ic_bug_report_white_3x.png" />
+    <BundleResource Include="Resources\ic_bug_report_white.png" />
+    <BundleResource Include="Resources\ic_lightbulb_outline_white_2x.png" />
+    <BundleResource Include="Resources\ic_lightbulb_outline_white_3x.png" />
+    <BundleResource Include="Resources\ic_lightbulb_outline_white.png" />
+    <BundleResource Include="Resources\ic_query_builder_white_2x.png" />
+    <BundleResource Include="Resources\ic_query_builder_white_3x.png" />
+    <BundleResource Include="Resources\ic_query_builder_white.png" />
+    <BundleResource Include="Resources\ic_screen_share_white_2x.png" />
+    <BundleResource Include="Resources\ic_screen_share_white_3x.png" />
+    <BundleResource Include="Resources\ic_screen_share_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XMenuTest.Core\XMenuTest.Core.csproj">
+      <Project>{E9D370A2-4323-4D68-8F00-44D2768ABBE9}</Project>
+      <Name>XMenuTest.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>
